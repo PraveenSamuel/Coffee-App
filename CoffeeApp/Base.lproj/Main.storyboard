@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CoffeeApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg" translatesAutoresizingMaskIntoConstraints="NO" id="XF6-tq-swy"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="CoffeeApp" translatesAutoresizingMaskIntoConstraints="NO" id="3qc-mv-vjE">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="83" id="cxe-XV-gAY"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter the number of cups of Coffee" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OpJ-DG-tfs">
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Cups : 10" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NbZ-qk-q4H">
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad" keyboardAppearance="light"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AMOUNT TO PAY" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Eq-hN-rGq">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="X3r-iB-vD0"/>
+                                    <constraint firstAttribute="width" constant="200" id="udh-e5-nrx"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0fH-6b-H0E">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="103" id="Xea-en-xQD"/>
+                                    <constraint firstAttribute="height" constant="30" id="cCE-km-h8u"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="25"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ebe-vt-Gar">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="53" id="xQi-Jk-Ics"/>
+                                </constraints>
+                                <state key="normal" image="calculate"/>
+                                <connections>
+                                    <action selector="calculatePrice:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wir-R4-wOm"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="ebe-vt-Gar" firstAttribute="top" secondItem="0fH-6b-H0E" secondAttribute="bottom" constant="18" id="1UG-lz-ae0"/>
+                            <constraint firstItem="XF6-tq-swy" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="2L0-S5-ILE"/>
+                            <constraint firstItem="OpJ-DG-tfs" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="35" id="4tr-pK-K7o"/>
+                            <constraint firstItem="0fH-6b-H0E" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="120" id="5yi-E4-vhB"/>
+                            <constraint firstItem="NbZ-qk-q4H" firstAttribute="top" secondItem="OpJ-DG-tfs" secondAttribute="bottom" constant="40" id="6Vi-72-TdG"/>
+                            <constraint firstItem="0fH-6b-H0E" firstAttribute="top" secondItem="1Eq-hN-rGq" secondAttribute="bottom" constant="18" id="6mh-rr-YzP"/>
+                            <constraint firstItem="NbZ-qk-q4H" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="71" id="9j3-sl-ngg"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ebe-vt-Gar" secondAttribute="trailing" constant="81" id="BQ4-Fs-8e9"/>
+                            <constraint firstItem="3qc-mv-vjE" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="35" id="JjT-Ki-xC8"/>
+                            <constraint firstItem="1Eq-hN-rGq" firstAttribute="top" secondItem="NbZ-qk-q4H" secondAttribute="bottom" constant="40" id="LyV-qb-yme"/>
+                            <constraint firstItem="NbZ-qk-q4H" firstAttribute="centerX" secondItem="XF6-tq-swy" secondAttribute="centerX" id="M5H-qJ-acI"/>
+                            <constraint firstItem="ebe-vt-Gar" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="80" id="O7Z-6X-tKs"/>
+                            <constraint firstItem="NbZ-qk-q4H" firstAttribute="centerX" secondItem="OpJ-DG-tfs" secondAttribute="centerX" id="Oxb-SR-kng"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="0fH-6b-H0E" secondAttribute="trailing" constant="120" id="Pzv-vU-wK6"/>
+                            <constraint firstItem="OpJ-DG-tfs" firstAttribute="top" secondItem="3qc-mv-vjE" secondAttribute="bottom" constant="16" id="a3Q-Ln-eOl"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="OpJ-DG-tfs" secondAttribute="trailing" constant="35" id="d7R-QQ-BrI"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="1Eq-hN-rGq" secondAttribute="trailing" constant="72" id="idZ-U0-q74"/>
+                            <constraint firstItem="1Eq-hN-rGq" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="71" id="lJK-MX-Xzc"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="3qc-mv-vjE" secondAttribute="trailing" constant="35" id="qK1-4c-qBr"/>
+                            <constraint firstItem="3qc-mv-vjE" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="10" id="zu1-aX-MpM"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="inputCount" destination="NbZ-qk-q4H" id="5yS-KU-Ga7"/>
+                        <outlet property="priceDisplay" destination="0fH-6b-H0E" id="o6J-qy-tre"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="136.28185907046478"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="CoffeeApp" width="313" height="56"/>
+        <image name="bg" width="375" height="667"/>
+        <image name="calculate" width="182" height="53"/>
+    </resources>
+</document>
